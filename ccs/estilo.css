@@ -8,7 +8,7 @@
 
  #padre{
     height:260px;
-    background-color: #BFA393;
+    background-image: linear-gradient(to top,white, #BFA393);
     display: flex;
 }
 .centrar{
@@ -20,6 +20,17 @@
     height: 70px;
     font-size: 70px;
     width: 80%;
+    animation-name: titulotienda;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+@keyframes titulotienda{
+    0% {
+        font-size: 20px;
+    }
+    100% {
+        font-size: 70px;
+    }
 }
 .user{
     color:white;
@@ -40,28 +51,31 @@ nav ul {
     flex-direction: row;
     justify-content: center;
 }
-nav ul li {
-    height: 40px;
-    width: 20%;
-    text-align: center;
-}
 nav ul li a {
     color:white;
     text-decoration: none;
     position: relative;
-    height: 40px;
+    height: 45px;
     top: 10px;
     width: 20%;
     text-align: center;
+}
+
+nav ul li {
+    height: 45px;
+    width: 20%;
+    text-align: center;
+    transition: all 1s ;
 }
 nav ul li:hover{
     background-color: grey;
 }
 
+
  /* MAIN  */ 
 
 #main{
-    background-color:#BFA393;
+    background-color: #BFA393;
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 60% 40%;
@@ -91,9 +105,10 @@ iframe {
 .video{
     grid-area: video;
     height: 100%;
-    width: 100%;
+    width: 80%;
+    position: relative;
+    left: 120px;
     align-self: center;
-    background-color: rgb(156, 136, 136);
 }
 .hijoparrafo {
     text-align: center;
@@ -170,6 +185,13 @@ iframe {
     height: 300px;
     text-align: center;
     grid-area: a1;
+}
+
+div fieldset img {
+    transition: all 1s;
+}
+fieldset img:hover {
+    height: 250px;
 }
 .cuadroVentaB{
     height: 300px;
@@ -251,7 +273,7 @@ iframe {
         height: auto;
     }
     .nav {
-        height: 200px;
+        height: 220px;
         text-align: center;
         background-color: #c49e88ad;
     }
@@ -265,13 +287,14 @@ iframe {
                             "accesorios"
                             "preguntas"
                             "contacto";
-    
         justify-content: center;
     }
     nav ul li {
         width: 100%;
         text-align: center;
+        transition: all 2s;
     }
+
     nav ul li a {
         color:white;
         text-decoration: none;
@@ -281,6 +304,7 @@ iframe {
         width: 20%;
         text-align: center;
     }
+
     #main{
         background-color:#BFA393;
         display: grid;
@@ -294,8 +318,7 @@ iframe {
     }
     .imagenhome{
         width: 100%;
-        grid-area: foto;
-        background-color:rgba(172, 152, 146, 0.582);
+        grid-area: foto;;
     }    
     img {
         height: 100%;
@@ -387,17 +410,11 @@ iframe {
         text-align: center;
         grid-area: area8;
     }
-    .imagenes{
-        height: 150px;
-    }
     .imagenes img{
         height: 100%;
         width: auto;
     }
-    #imagenLentes {
-        height: 100%;
-        width: 100%;
-    }
+
     #footer{
         display: flex;
         justify-content: space-between;
@@ -466,15 +483,13 @@ iframe {
     nav ul li {
         width: 100%;
         text-align: center;
+        transition: all 1s ;
+        height: 50px;
     }
-    nav ul li a {
-        color:white;
-        text-decoration: none;
-        position: relative;
-        height: 200px;
-        top: 10px;
-        width: 20%;
-        text-align: center;
+    nav ul li:hover{
+        background-color: grey;
+        height: 100%;
+
     }
     .centrar{
         position:relative;
@@ -571,6 +586,7 @@ iframe {
         width: 80%;
         position: relative;
         top: 150px;
+    }
     
 }
 
